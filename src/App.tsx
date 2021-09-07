@@ -1,11 +1,13 @@
-import React from 'react';
 
+import CssBaseline from '@material-ui/core/CssBaseline';
+import NavBar from './Components/Nav'
 
 function App() {
   return (
-    <div className="App">
-      <h1>hi</h1>
-    </div>
+    <>
+    <CssBaseline />
+    <NavBar />
+    </>
   );
 }
 
