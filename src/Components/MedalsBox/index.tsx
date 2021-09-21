@@ -7,7 +7,7 @@ import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 
-import AvatarOlimpiada from "../../../Assets/olimpiadas.jpeg";
+import AvatarOlimpiada from "../../Assets/olimpiadas.jpeg";
 import { RiMedalLine } from "react-icons/ri";
 
 const useStyles = makeStyles({
@@ -31,17 +31,12 @@ interface Athlet {
   medal: String;
 }
 
-export function MedalsBox(Athlet: Athlet) {
+export function MedalsBox(Athlet: any) {
   const classes = useStyles();
 
   return (
     <Card className={classes.root}>
       <CardActionArea>
-        <CardMedia
-          className={classes.media}
-          image={AvatarOlimpiada}
-          title="Logo Olimpíada"
-        />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
             {Athlet.name}

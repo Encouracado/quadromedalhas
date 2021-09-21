@@ -17,7 +17,6 @@ export default function AthleteGrind() {
     }
 
     LoadMedalists();
-    console.log(medalistsRepositorie[0]);
   }, []);
 
   return (
@@ -27,8 +26,12 @@ export default function AthleteGrind() {
         <Typography
           component="div"
           style={{ backgroundColor: "#cfe8fc", height: "100vh" }}
-        ></Typography>
-        3w vbnm,
+        >
+          {medalistsRepositorie.map((medalist) => {
+            console.log(medalist);
+            return <MedalsBox Athelet={medalist} />;
+          })}
+        </Typography>
       </Container>
     </React.Fragment>
   );
